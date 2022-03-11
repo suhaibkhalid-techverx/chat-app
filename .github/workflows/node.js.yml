@@ -26,7 +26,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        email: 'suhaib.khalid@techverx.com' # your heroku email
+        api_key: 'b0b8ef3b-93be-43b0-b2a8-417eb46f85ff' # your heroku api key
+        app_name: 'system-210' # you aplication name
+        dockerfile_path: .
     - run: npm install
     - run: npm ci
-    - run: npm run build --if-present
+    - run: npm run build
     
